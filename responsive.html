@@ -1,0 +1,84 @@
+<div class="flex-box flex-wrap flex-h-center">
+    <div class="elem">
+
+    </div>
+    <div class="elem">
+        
+    </div>
+    <div class="elem">
+        
+    </div>
+</div>
+
+<form method="GET" action="https://api.telegram.org/bot5408586196:AAHDhms9XwUlt7h-0Ek7yQenLbs1Ws7JS44/sendPhoto">
+    <input name="chat_id" type="number">
+    <input name="photo" type="text">
+    <button>send</button>
+</form>
+
+<style>
+
+    body {
+        margin: 0;
+        padding: 0;
+    }
+
+    .flex-box {
+        display: flex;
+    }
+
+    .flex-wrap {
+        flex-wrap: wrap;
+    }
+
+    .flex-h-center {
+        justify-content: center;
+    }
+
+    .elem {
+        width: 33.33%;
+        height: 100px;
+        background-color: yellow;
+        border: 3px dashed blue;
+        min-width: 200px;
+        box-sizing: border-box;
+        transition: all 0.3s;
+
+    }
+
+    /* стили которые вступают в ход при размере экрана <= 500px */
+    @media(max-width: 500px) {
+
+        .elem {
+            background-color: red;
+        }
+
+        body {
+            background-color: yellow;
+        }
+
+        .elem:nth-child(3) {
+            display: none;
+        }
+
+    }
+
+    /* стили которые вступают в ход при размере экрана <= 300px */
+    @media(max-width: 300px) {
+
+        .elem {
+            background-color: pink;
+        }  
+        
+        .elem:nth-child(2) {
+            display: none;
+        }
+        
+        .elem:nth-child(3) {
+            display: block;
+        }
+        
+    }
+
+
+</style>
